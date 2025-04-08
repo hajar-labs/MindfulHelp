@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulHelp - Mental Health Support Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/chatbot.css">
+    <link rel="stylesheet" href="styles/modals.css">
+    <link rel="stylesheet" href="styles/responsive.css">    
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/ressource.css">
+    <link rel="stylesheet" href="styles/professionals.css">
+    <link rel="stylesheet" href="styles/dark_theme.css">
+    <link rel="stylesheet" href="styles/community.css">
+    <link rel="stylesheet" href="styles/emergency.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>MindfulHelp</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#chatbot">AI Support</a></li>
+                    <li><a href="#professionals">Professionals</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#emergency">Emergency</a></li>
+                    <li><button class="btn btn-primary" id="login-btn" aria-label="Login to your account">Login</button></li>
+                    <li><button class="btn btn-primary" id="signup-btn" aria-label="Sign up for a new account">Sign Up</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Mental Wellbeing Matters</h1>
+            <p>Connect with mental health resources, get AI-powered emotional support, or book consultations with professional therapists - all in one place.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="get-support-btn">Get Support Now</button>
+                <button class="btn btn-secondary" id="learn-more-btn">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Support Chatbot</h3>
+                    <p>Get immediate emotional support through our AI-powered chatbot, available 24/7 to listen and provide guidance.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Professional Consultation</h3>
+                    <p>Book virtual sessions with licensed therapists and mental health professionals for personalized care.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Self-Help Resources</h3>
+                    <p>Access a library of articles, videos, and exercises designed to help you understand and manage your mental health.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Support</h3>
+                    <p>Join anonymous forums where you can connect with others who understand what you're going through.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Emergency Assistance</h3>
+                    <p>Quickly access crisis hotlines and emergency resources when you need immediate help.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Consultations</h3>
+                    <p>Connect face-to-face with therapists through secure video calls for a more personal experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section" id="chatbot">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI-Powered Therapy Assistant</h2>
+                <p>Your personal mental health companion, combining evidence-based techniques with adaptive conversation</p>
+            </div>
+            <div class="chat-interface">
+                <div class="chat-sidebar">
+                    <div class="user-profile">
+                        <div class="profile-pic">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="mood-tracker">
+                            <h4>Today's Mood</h4>
+                            <div class="mood-selector">
+                                <button class="mood-btn" data-mood="great"><i class="fas fa-grin-beam"></i> Great</button>
+                                <button class="mood-btn" data-mood="good"><i class="fas fa-smile"></i> Good</button>
+                                <button class="mood-btn" data-mood="okay"><i class="fas fa-meh"></i> Okay</button>
+                                <button class="mood-btn" data-mood="sad"><i class="fas fa-frown"></i> Sad</button>
+                                <button class="mood-btn" data-mood="awful"><i class="fas fa-sad-tear"></i> Awful</button>
+                            </div>
+                        </div>
+                        <div class="mood-history">
+                            <h4>Mood History</h4>
+                            <div class="mood-chart">
+                                <div class="chart-placeholder">
+                                    <div class="chart-bar" style="height: 60%;"><span>Mon</span></div>
+                                    <div class="chart-bar" style="height: 75%;"><span>Tue</span></div>
+                                    <div class="chart-bar" style="height: 40%;"><span>Wed</span></div>
+                                    <div class="chart-bar" style="height: 65%;"><span>Thu</span></div>
+                                    <div class="chart-bar" style="height: 50%;"><span>Fri</span></div>
+                                    <div class="chart-bar" style="height: 70%;"><span>Sat</span></div>
+                                    <div class="chart-bar active" style="height: 55%;"><span>Sun</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="therapy-options">
+                        <h4>Therapeutic Activities</h4>
+                        <ul>
+                            <li><button class="therapy-btn" data-activity="cbt"><i class="fas fa-brain"></i> Thought Challenge</button></li>
+                            <li><button class="therapy-btn" data-activity="meditation"><i class="fas fa-om"></i> Guided Meditation</button></li>
+                            <li><button class="therapy-btn" data-activity="journal"><i class="fas fa-book"></i> Reflection Journal</button></li>
+                            <li><button class="therapy-btn" data-activity="breathing"><i class="fas fa-wind"></i> Breathing Exercise</button></li>
+                            <li><button class="therapy-btn" data-activity="goals"><i class="fas fa-bullseye"></i> Goal Setting</button></li>
+                        </ul>
+                    </div>
+                    <div class="relationship-status">
+                        <h4>AI Relationship</h4>
+                        <div class="relationship-meter">
+                            <div class="meter-fill" style="width: 65%;"></div>
+                        </div>
+                        <p>Level 3: Supportive Guide</p>
+                        <small>Chat more to build your relationship</small>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div id="chat-container">
+                        <!-- Chat messages will be appended here -->
+                    </div>
+                    <input id="user-input" type="text" placeholder="Type your message here..." />
+                    <button id="send-button">Send</button>
+                </div>
+                <div class="chat-insights hidden">
+                    <div class="insights-header">
+                        <h3>Insights & Progress</h3>
+                        <button class="close-insights"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="insights-content">
+                        <div class="insight-card">
+                            <h4>Mood Patterns</h4>
+                            <p>Your mood tends to improve on weekends and dips on Wednesdays.</p>
+                            <div class="insight-data">
+                                <div class="data-visualization"></div>
+                            </div>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Common Triggers</h4>
+                            <p>Work stress and sleep quality appear to impact your mood significantly.</p>
+                            <ul class="trigger-list">
+                                <li>Work deadlines <span class="impact high">High impact</span></li>
+                                <li>Poor sleep <span class="impact medium">Medium impact</span></li>
+                                <li>Social interactions <span class="impact low">Low impact</span></li>
+                            </ul>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Coping Strategies</h4>
+                            <p>Most effective techniques based on your feedback:</p>
+                            <ol class="strategy-list">
+                                <li>Breathing exercises</li>
+                                <li>Cognitive reframing</li>
+                                <li>Short meditation sessions</li>
+                            </ol>
+                        </div>
+                        <div class="insight-card">
+                            <h4>Growth Areas</h4>
+                            <div class="growth-skills">
+                                <div class="skill">
+                                    <span>Stress Management</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span>Emotional Awareness</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span>Self-Compassion</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 45%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insights-actions">
+                        <button class="export-data-btn"><i class="fas fa-download"></i> Export Data</button>
+                        <button class="share-with-therapist-btn"><i class="fas fa-share"></i> Share with Therapist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professionals Section -->
+    <section class="professionals-section" id="professionals">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mental Health Professionals</h2>
+            </div>
+            <div class="professionals-grid">
+                <div class="professional-card">
+                    <img src="images/Sarah Johnson.jpg" alt="Dr. Sarah Johnson" loading="lazy">
+                    <div class="professional-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Clinical Psychologist</p>
+                        <p>Specializes in anxiety disorders and depression</p>
+                        <button class="btn btn-primary book-session-btn">Book a Session</button>
+                    </div>
+                </div>
+                <div class="professional-card">
+                    <img src="images/michael_Chen.jpg" alt="Dr. Michael Chen" loading="lazy">
+                    <div class="professional-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p>Psychiatrist</p>
+                        <p>Specializes in mood disorders and PTSD</p>
+                        <button class="btn btn-primary book-session-btn">Book a Session</button>
+                    </div>
+                </div>
+                <div class="professional-card">
+                    <img src="images/Lisa_Rodriguez.jpg" alt="Dr. Lisa Rodriguez" loading="lazy">
+                    <div class="professional-info">
+                        <h3>Lisa Rodriguez</h3>
+                        <p>Licensed Therapist</p>
+                        <p>Specializes in family therapy and relationships</p>
+                        <button class="btn btn-primary book-session-btn">Book a Session</button>
+                    </div>
+                </div>
+                <div class="professional-card">
+                    <img src="images/James_Wilson.jpg" alt="Dr. James Wilson" loading="lazy">
+                    <div class="professional-info">
+                        <h3>Dr. James Wilson</h3>
+                        <p>Cognitive Behavioral Therapist</p>
+                        <p>Specializes in addiction recovery and stress management</p>
+                        <button class="btn btn-primary book-session-btn">Book a Session</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Self-Help Resources</h2>
+            </div>
+            <div class="resources-tabs">
+                <button class="tab-btn active" data-tab="articles">Articles</button>
+                <button class="tab-btn" data-tab="videos">Videos</button>
+                <button class="tab-btn" data-tab="exercises">Exercises</button>
+            </div>
+            <div class="resources-content active" id="articles">
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="resource-info">
+                            <h3>Understanding Anxiety: Causes and Coping Mechanisms</h3>
+                            <p>Learn about the root causes of anxiety and discover effective strategies to manage it in your daily life.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="resource-info">
+                            <h3>The Connection Between Sleep and Mental Health</h3>
+                            <p>Explore how sleep affects your mental wellbeing and get tips for improving your sleep quality.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="resource-info">
+                            <h3>Mindfulness Practices for Everyday Life</h3>
+                            <p>Discover simple mindfulness techniques that you can incorporate into your daily routine.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resources-content" id="videos">
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <i class="fas fa-video"></i>
+                        <div class="resource-info">
+                            <h3>Guided Meditation for Stress Relief</h3>
+                            <p>A 15-minute guided meditation session to help you reduce stress and find inner calm.</p>
+                            <a href="#" class="watch-video">Watch Video</a>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <i class="fas fa-video"></i>
+                        <div class="resource-info">
+                            <h3>Understanding Depression: Signs and Support</h3>
+                            <p>An informative video explaining the symptoms of depression and ways to seek help.</p>
+                            <a href="#" class="watch-video">Watch Video</a>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <i class="fas fa-video"></i>
+                        <div class="resource-info">
+                            <h3>Breathing Exercises for Anxiety Relief</h3>
+                            <p>A step-by-step video guide teaching effective breathing techniques to manage anxiety attacks.</p>
+                            <a href="#" class="watch-video">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resources-content" id="exercises">
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <div class="resource-info">
+                            <h3>5-Minute Grounding Exercise</h3>
+                            <p>A quick exercise to help you reconnect with the present moment during times of anxiety.</p>
+                            <a href="#" class="try-exercise">Try Exercise</a>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <div class="resource-info">
+                            <h3>Journaling Prompts for Self-Reflection</h3>
+                            <p>Guided journaling exercises to help you process emotions and gain clarity.</p>
+                            <a href="#" class="try-exercise">Try Exercise</a>
+                        </div>
+                    </div>
+                    <div class="resource-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <div class="resource-info">
+                            <h3>Progressive Muscle Relaxation</h3>
+                            <p>Learn how to release physical tension with this step-by-step relaxation technique.</p>
+                            <a href="#" class="try-exercise">Try Exercise</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section" id="community">
+        <div class="container">
+            <div class="section-title">
+                <h2>Community Support</h2>
+            </div>
+            <div class="forum-container">
+                <div class="forum-header">
+                    <h3>Discussion Forums</h3>
+                    <div class="forum-search">
+                        <input type="text" placeholder="Search topics...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="forum-topics">
+                    <div class="topic-header">
+                        <div>Topic</div>
+                        <div>Author</div>
+                        <div>Replies</div>
+                        <div>Last Activity</div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Coping with work-related stress during the pandemic</div>
+                        <div class="topic-author">Anonymous</div>
+                        <div class="topic-replies">24</div>
+                        <div class="topic-activity">2 hours ago</div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Meditation practices that helped my anxiety</div>
+                        <div class="topic-author">Anonymous</div>
+                        <div class="topic-replies">18</div>
+                        <div class="topic-activity">5 hours ago</div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Supporting a loved one with depression</div>
+                        <div class="topic-author">Anonymous</div>
+                        <div class="topic-replies">32</div>
+                        <div class="topic-activity">Yesterday</div>
+                    </div>
+                    <div class="topic-item">
+                        <div class="topic-title">Healthy boundaries in relationships</div>
+                        <div class="topic-author">Anonymous</div>
+                        <div class="topic-replies">15</div>
+                        <div class="topic-activity">2 days ago</div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="btn btn-primary" id="new-topic-btn">Start New Topic</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency-section" id="emergency">
+        <div class="container">
+            <div class="section-title">
+                <h2>Emergency Support</h2>
+            </div>
+            <div class="emergency-alert">
+                <i class="fas fa-exclamation-circle"></i>
+                <div>
+                    <h3>In Crisis? Get Immediate Help</h3>
+                    <p>If you're thinking about suicide, are worried about a friend or loved one, or would like emotional support, help is available 24/7.</p>
+                </div>
+            </div>
+            <div class="emergency-numbers">
+                <div class="emergency-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>National Suicide Prevention Lifeline</h3>
+                    <div class="phone">988</div>
+                    <p>Available 24 hours. Languages: English, Spanish.</p>
+                    <button class="btn btn-danger">Call Now</button>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-comment-alt"></i>
+                    <h3>Crisis Text Line</h3>
+                    <div class="phone">Text HOME to 741741</div>
+                    <p>Available 24/7 for any kind of crisis.</p>
+                    <button class="btn btn-danger">Text Now</button>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-first-aid"></i>
+                    <h3>Emergency Services</h3>
+                    <div class="phone">911</div>
+                    <p>If you or someone you know is in immediate danger.</p>
+                    <button class="btn btn-danger">Call Now</button>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Find Nearest Emergency Room</h3>
+                    <p>Locate the closest emergency services for immediate in-person assistance.</p>
+                    <button class="btn btn-danger">Find Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MindfulHelp</h3>
+                    <p>Our mission is to make mental health support accessible to everyone, whenever and wherever they need it.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#chatbot">AI Support</a></li>
+                        <li><a href="#professionals">Professionals</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#emergency">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>Stay updated with our newsletter for the latest resources and mental health tips.</p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary" style="margin-top: 10px;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MindfulHelp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div style="text-align: right; margin-bottom: 20px;">
+                    <a href="#" id="forgot-password">Forgot Password?</a>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Login</button>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>Create an Account</h2>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Sign Up</button>
+                <div style="text-align: center; margin-top: 20px;">
+                    <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>Book a Consultation</h2>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="therapist">Select Therapist</label>
+                    <select id="therapist">
+                        <option>Dr. Sarah Johnson - Clinical Psychologist</option>
+                        <option>Dr. Michael Chen - Psychiatrist</option>
+                        <option>Lisa Rodriguez - Licensed Therapist</option>
+                        <option>Dr. James Wilson - Cognitive Behavioral Therapist</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="consultation-type">Consultation Type</label>
+                    <select id="consultation-type">
+                        <option>Video Call</option>
+                        <option>Voice Call</option>
+                        <option>Chat</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="consultation-date">Date</label>
+                    <input type="date" id="consultation-date">
+                </div>
+                <div class="form-group">
+                    <label for="consultation-time">Time</label>
+                    <select id="consultation-time">
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="consultation-notes">Additional Notes (Optional)</label>
+                    <textarea id="consultation-notes" placeholder="Please provide any information that might be helpful for your therapist to know before the session."></textarea>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Topic Modal -->
+    <div class="modal" id="new-topic-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>Start a New Topic</h2>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="topic-title">Topic Title</label>
+                    <input type="text" id="topic-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="topic-category">Category</label>
+                    <select id="topic-category">
+                        <option>Anxiety</option>
+                        <option>Depression</option>
+                        <option>Stress Management</option>
+                        <option>Relationships</option>
+                        <option>Self-Care</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="topic-content">Content</label>
+                    <textarea id="topic-content" required></textarea>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="checkbox" id="anonymous-post" checked>
+                    <label for="anonymous-post">Post Anonymously</label>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="checkbox" id="community-guidelines" required>
+                    <label for="community-guidelines">I agree to the <a href="#">Community Guidelines</a></label>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;">Post Topic</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Consultation Page -->
+    <div class="modal" id="video-consultation-modal">
+        <div class="modal-content" style="max-width: 90%; width: 1200px;">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>Video Consultation with Dr. Sarah Johnson</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 20px;">
+                <div>
+                    <div class="video-container">
+                        <video id="video-stream" autoplay muted></video>
+                    </div>
+                    <div class="video-controls">
+                        <button class="video-btn" id="mic-btn"><i class="fas fa-microphone"></i> Mute</button>
+                        <button class="video-btn" id="video-btn"><i class="fas fa-video"></i> Stop Video</button>
+                        <button class="video-btn" id="screen-share-btn"><i class="fas fa-desktop"></i> Share Screen</button>
+                        <button class="video-btn end-call" id="end-call-btn"><i class="fas fa-phone-slash"></i> End Call</button>
+                    </div>
+                </div>
+                <div class="chat-sidebar">
+                    <div class="chat-header">
+                        <i class="fas fa-comment-alt"></i>
+                        <h3>Session Chat</h3>
+                    </div>
+                    <div class="chat-messages" id="session-chat-messages">
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                Hello! I'm Dr. Sarah Johnson. How are you feeling today?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="session-chat-input" placeholder="Type your message...">
+                        <button id="session-chat-send"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/main.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="scripts/modals.js"></script>
+    <script src="scripts/video.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

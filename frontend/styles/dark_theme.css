@@ -1,0 +1,57 @@
+.dark-theme {
+    background: #222;
+    color: #eee;
+}
+
+.dark-theme .chat-interface {
+    background: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .chat-sidebar {
+    background: #2a2a2a;
+    border-color: #444;
+}
+
+.dark-theme .chat-header, 
+.dark-theme .chat-input-container {
+    border-color: #444;
+}
+
+.dark-theme .chat-messages {
+    background: #2a2a2a;
+}
+
+.dark-theme .bot-message .message-content {
+    background: #383838;
+    border-color: #444;
+    color: #eee;
+}
+
+.dark-theme .user-message .message-content {
+    background: #3a4a64;
+    color: #eee;
+}
+
+.dark-theme .chat-input-wrapper {
+    background: #383838;
+    border-color: #444;
+}
+
+.dark-theme #user-input {
+    color: #eee;
+}
+
+.dark-theme .date-divider:before, 
+.dark-theme .date-divider:after {
+    background: #444;
+}
+
+.dark-theme .insight-card {
+    background: #383838;
+}
+
+.dark-theme .insight-data {
+    background: #2a2a2a;
+    border-color: #444;
+}
